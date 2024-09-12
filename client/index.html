@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro y Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>Mi Sitio</h1>
+            <div class="nav-buttons">
+                <button id="loginNavBtn">Iniciar Sesión</button>
+                <button id="registerNavBtn">Registrarse</button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="homePage" class="page">
+        <h1>Bienvenido a Mi Sitio</h1>
+        <p>Por favor, inicia sesión o regístrate para continuar.</p>
+    </div>
+
+    <div id="loginPage" class="page hidden">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div id="registerPage" class="page hidden">
+        <h2>Registrarse</h2>
+        <form id="registerForm">
+            <input type="text" id="registerName" placeholder="Nombre" required>
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <div id="verificationPage" class="page hidden">
+        <h2>Verificar Email</h2>
+        <p>Se ha enviado un código de verificación a tu email. Por favor, introdúcelo a continuación:</p>
+        <form id="verificationForm">
+            <input type="text" id="verificationCode" placeholder="Código de verificación" required>
+            <button type="submit">Verificar</button>
+        </form>
+    </div>
+
+    <div id="welcomePage" class="page hidden">
+        <h2>¡Bienvenido, <span id="user-name"></span>!</h2>
+        <p>estamos emocionados de que estés aquí.</p>
+        <button id="logoutBtn">Cerrar Sesión</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
